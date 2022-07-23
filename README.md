@@ -13,7 +13,9 @@
 
 
 *If you want to run this project in VSCode on Windows and setup G++, click [here and follow the instructions](https://code.visualstudio.com/docs/languages/cpp).*
-Using VSCode:
+
+
+Using VSCode on Windows 10:
 * Enter "g++ mandlebrot.cpp" into the terminal
 * Then enter ".\a" to run the program
 
