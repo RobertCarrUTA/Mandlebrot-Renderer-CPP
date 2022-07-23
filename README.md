@@ -13,6 +13,9 @@
 
 
 *If you want to run this project in VSCode on Windows and setup G++, click [here and follow the instructions](https://code.visualstudio.com/docs/languages/cpp).*
+Using VSCode:
+* Enter "g++ mandlebrot.cpp" into the terminal
+* Then enter ".\a" to run the program
 
 ## About the project
 Using C++, this project aims to render Mandelbrot images and display the results in the PPM format (**this is a self-study project**, so no tutorials were followed). I have always loved the Mandlebrot set. It is fun to explore and mess around with the images, and the images can be beautiful. Moreover, the Mandelbrot set is a great way to test multithreading and how far a program can be pushed to use a system's memory and its processing power when rendering highly detailed and large images (especially in higher precision parts of the set).
