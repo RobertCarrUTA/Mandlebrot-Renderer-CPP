@@ -1,3 +1,1 @@
-This is the file that lists and sets the program's settings.
-
-Instead of modifying mandelbrot.cpp manually, this provides quick and easy changes to the program's settings.
+500 500 200 0
