@@ -1,6 +1,8 @@
 #include <iostream> // Defines the standard input/output stream objects
 #include <fstream>  // Input/output stream class to operate on files
 #include <cstring>  // This header file defines several functions to manipulate C strings and arrays.
+#include <string>
+#include <fstream>
 
 /*
   Goals of program:
@@ -42,9 +44,35 @@
 
 int main ()
 {
-    // The below comments are just to help outline the process of the program
-
     // Obtain the required inputs from the input file settings.txt (for easier modification by the user)
+    std::ifstream settingsFile ("settings.txt");
+
+    if (settingsFile.is_open())
+    {
+        std::cout << "Opened settings.txt... Now reading the file...\n"<< std::endl;
+
+        int width, height, iterations, threads;
+
+        // We need to get values of width, height, iterations, and threads
+        while (settingsFile >> height >> width >> iterations >> threads)
+        {
+            settingsFile >> height;
+            settingsFile >> width;
+            settingsFile >> iterations;
+            settingsFile >> threads;
+        }
+
+        // Now read back the contents of settings.txt to ensure the values are being saved
+        std::cout << "height: " << height << std::endl;
+        std::cout << "width: " << width << std::endl;
+        std::cout << "iterations: " << iterations << std::endl;
+        std::cout << "threads: " << threads << "\n" << std::endl;
+
+        // We should make sure that the file is closed the after we are done using it
+        // This may be done automatically however, see here: https://m.cplusplus.com/reference/fstream/ifstream/close/
+        std::ifstream::close;
+    }
+    else std::cout << "Error: Unable to open settings.txt";
 
     // Write the PPM header to the output file
     
@@ -53,5 +81,6 @@ int main ()
     //   - Based on the previously found c value, find the number of iterations in the Mandelbrot formula
     //   - Map the RGB value of the resulting number
     //   - Output it to the image
+
 
 }
